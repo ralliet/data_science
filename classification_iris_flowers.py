@@ -61,6 +61,7 @@ models.append(('KNN', KNeighborsClassifier()))
 models.append(('CART', DecisionTreeClassifier()))
 models.append(('NB', GaussianNB()))
 models.append(('SVM', SVC()))
+
 # evaluate each model in turn
 results = []
 names = []
@@ -70,14 +71,25 @@ for name, model in models:
 	results.append(cv_results)
 	names.append(name)
     # print results
-	msg = "%s: %f (%f)" % (name, cv_results.mean(), cv_results.std())
-	print(msg)
+	""" msg = "%s: %f (%f)" % (name, cv_results.mean(), cv_results.std())
+	print(msg) """
 
 
 # Compare Algorithms
-fig = plt.figure()
+""" fig = plt.figure()
 fig.suptitle('Algorithm Comparison')
 ax = fig.add_subplot(111)
 plt.boxplot(results)
 ax.set_xticklabels(names)
-plt.show()
+plt.show() """
+
+# => KNN algorithm was the most accurate model
+
+
+# Make predictions on validation dataset
+knn = KNeighborsClassifier()
+knn.fit(X_train, Y_train)
+predictions = knn.predict(X_validation)
+print(accuracy_score(Y_validation, predictions))
+print(confusion_matrix(Y_validation, predictions))
+print(classification_report(Y_validation, predictions))
