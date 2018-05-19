@@ -35,5 +35,11 @@ dataset = pandas.read_csv(url, names=names)
 plt.show() """
 
 # histograms
-dataset.hist()
+""" dataset.hist()
+plt.show() """
+
+# scatter plot matrix
+# show the interactions between the variables
+# diagonal grouping suggests a high correlation and a predictable relationship
+scatter_matrix(dataset)
 plt.show()
