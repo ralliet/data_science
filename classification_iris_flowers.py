@@ -19,17 +19,21 @@ names = ['sepal-length', 'sepal-width', 'petal-length', 'petal-width', 'class']
 dataset = pandas.read_csv(url, names=names)
 
 # shape
-# print(dataset.shape)
+""" # print(dataset.shape) """
 
 # head
-# print(dataset.head(20))
+""" print(dataset.head(20)) """
 
 # descriptions
-# print(dataset.describe())
+""" print(dataset.describe()) """
 
 # class distribution
-# print(dataset.groupby('class').size())
+""" print(dataset.groupby('class').size()) """
 
 # box and whisker plots
-dataset.plot(kind='box', subplots=True, layout=(2,2), sharex=False, sharey=False)
+""" dataset.plot(kind='box', subplots=True, layout=(2,2), sharex=False, sharey=False)
+plt.show() """
+
+# histograms
+dataset.hist()
 plt.show()
