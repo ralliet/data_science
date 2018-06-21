@@ -9,5 +9,6 @@ from importlib import reload
 reload(sys)
 
 dbConnections = {
-    'operations': "dbname=czttuvyy user=czttuvyy host=postgres://czttuvyy:ezjzyMT833vTr7XsRGTDrxXxMC-qw0iz@horton.elephantsql.com:5432/czttuvyy"
+    'operations': "dbname=czttuvyy user=czttuvyy host=postgres://czttuvyy:ezjzyMT833vTr7XsRGTDrxXxMC-qw0iz@horton.elephantsql.com:5432/czttuvyy",
+    'python': "dbname=python user=czttuvyy host="
 }
